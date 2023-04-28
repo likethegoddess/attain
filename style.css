@@ -20,3 +20,46 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned
 with others.
 */
+
+/**
+ ** Site Header */ 
+ /* Add sufficient target area to site title */ 
+ .wp-block-site-title {
+  display: flex;
+  min-width: 48px; 
+  min-height: 48px; 
+}
+.wp-block-site-title a {
+  align-self: center;
+}
+
+/**
+ ** Navigation */ 
+ /* Add sufficient target area to site title */ 
+.wp-block-navigation__responsive-container .wp-block-navigation-link a {
+  display: flex;
+  min-width: 48px; 
+  min-height: 48px;  
+}
+.wp-block-navigation__responsive-container .wp-block-navigation-link a .wp-block-navigation-item__label {
+  align-self: center;
+}
+
+/* Mobile */ 
+/* Make padding around button consistant whether menu is open or closed */ 
+.wp-block-navigation__responsive-container.is-menu-open {
+  padding-top: var(--wp--preset--spacing--40);
+  padding-right: var(--wp--preset--spacing--30);
+  padding-bottom: var(--wp--preset--spacing--40);
+  padding-left: var(--wp--preset--spacing--30);
+}
+/* Add sufficient target area on mobile menu button */ 
+.wp-block-navigation__responsive-container-open, 
+.wp-block-navigation__responsive-container-close {
+  padding: 6px; 
+}
+.wp-block-navigation__responsive-container-close svg, .wp-block-navigation__responsive-container-open svg {
+  width: 36px; 
+  height: 36px; 
+}
+
