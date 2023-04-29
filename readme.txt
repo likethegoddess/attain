@@ -8,7 +8,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: Diana Thompson
 
-A full site editing theme. Empty version.
+An accessible full site editing base theme. 
 Please note that this is not a complete theme, only a head start.
 You need to add values to or remove setings in theme.json 
 for the theme to work without JavaScript errots in the editor.
@@ -31,16 +31,12 @@ GNU General Public License for more details.
 
 == Resources used to build this theme ==
 
+* Twenty Twenty-Three WordPress theme (C) WordPress.org
+License: GNU General Public License v2.0 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
 * Twenty Twenty-Two WordPress theme (C) WordPress.org
 License: GNU General Public License v2.0 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-* Q WordPress theme (C) Ari Stathopoulos
-License: GNU General Public License v2.0 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-
-* Underscores https://underscores.me/, (C) Automattic, Inc.
-License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 * Full site editing starter theme by Carolina Nymark
