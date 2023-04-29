@@ -1,4 +1,4 @@
-=== FSE Base Empty ===
+=== Afset ===
 Contributors: Diana Thompson
 Tested up to: 6.1
 Requires at least: 6.1
@@ -17,7 +17,7 @@ for the theme to work without JavaScript errots in the editor.
 1.0.0 Initial release
 
 == Licence ==
-FSE Base Empty is distributed under the terms of the GNU GPL.
+Afset is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
