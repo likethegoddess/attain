@@ -1,14 +1,14 @@
 <?php
 /**
- * Afsey functions and definitions
+ * Afset functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Afsey
+ * @package afset
  * @since 1.0.0
  */
 
-define( 'AFSEY_VERSION', wp_get_theme()->get( 'Version' ) );
+define( 'AFSET_VERSION', wp_get_theme()->get( 'Version' ) );
 
 /**
  * Enqueue the CSS files.
@@ -17,12 +17,12 @@ define( 'AFSEY_VERSION', wp_get_theme()->get( 'Version' ) );
  *
  * @return void
  */
-function afsey_styles() {
+function afset_styles() {
 	wp_enqueue_style(
-		'afsey-style',
+		'afset-style',
 		get_stylesheet_uri(),
 		[],
-		AFSEY_VERSION
+		AFSET_VERSION
 	);
 }
-add_action( 'wp_enqueue_scripts', 'afsey_styles' );
+add_action( 'wp_enqueue_scripts', 'afset_styles' );
