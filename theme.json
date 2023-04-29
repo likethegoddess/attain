@@ -212,13 +212,65 @@
 						"text": "var(--wp--preset--color--foreground)"
 					},
 					"typography": {
-						"textDecoration": "underline 2px"
+						"textDecoration": "none"
 
 					}
 				}
 			}
 		},
-		"blocks": {}
+		"blocks": {
+			"core/navigation": {
+				"elements": {
+					"link": {
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline dashed"
+							}
+						},
+						":active": {
+							"typography": {
+								"textDecoration": "none"
+							}
+						},
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			},
+			"core/site-title": {
+				"elements": {
+					"link": {
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "none"
+							}
+						},
+						":active": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				}
+			}
+		}
 	},
 	"templateParts": [
 		{
