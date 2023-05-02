@@ -1,4 +1,4 @@
-=== Afset ===
+=== Attain ===
 Contributors: Diana Thompson
 Tested up to: 6.1
 Requires at least: 6.1
@@ -17,7 +17,7 @@ for the theme to work without JavaScript errors in the editor.
 1.0.0 Initial release
 
 == Licence ==
-Afset is distributed under the terms of the GNU GPL.
+Attain is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

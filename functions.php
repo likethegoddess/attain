@@ -4,11 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package afset
+ * @package attain
  * @since 1.0.0
  */
 
-define( 'AFSET_VERSION', wp_get_theme()->get( 'Version' ) );
+define( 'ATTAIN_VERSION', wp_get_theme()->get( 'Version' ) );
 
 /**
  * Enqueue the CSS files.
@@ -17,12 +17,12 @@ define( 'AFSET_VERSION', wp_get_theme()->get( 'Version' ) );
  *
  * @return void
  */
-function afset_styles() {
+function attain_styles() {
 	wp_enqueue_style(
-		'afset-style',
+		'attain-style',
 		get_stylesheet_uri(),
 		[],
-		AFSET_VERSION
+		ATTAIN_VERSION
 	);
 }
-add_action( 'wp_enqueue_scripts', 'afset_styles' );
+add_action( 'wp_enqueue_scripts', 'attain_styles' );

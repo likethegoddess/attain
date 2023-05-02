@@ -1,10 +1,10 @@
 /*
-Theme Name: Afset
+Theme Name: Attain
+Theme URI: https://attainwp.com
 Author: Diana Thompson
 Author URI: https://itsresourceful.com
-Theme URI: 
-Tags: full-site-editing
-Text Domain: afset
+Tags: accessibility-ready, full-site-editing
+Text Domain: attain
 Requires at least: 6.1
 Requires PHP: 7.4
 Tested up to: 6.1
@@ -22,9 +22,10 @@ with others.
 */
 
 /**
- ** Site Header */ 
- /* Add sufficient target area to site title */ 
- .wp-block-site-title {
+ ** Site Header 
+ */ 
+/* Add sufficient target area to site title */ 
+.wp-block-site-title {
   display: flex;
   min-width: 48px; 
   min-height: 48px; 
@@ -34,8 +35,9 @@ with others.
 }
 
 /**
- ** Navigation */ 
- /* Add sufficient target area to site title */ 
+ ** Navigation 
+ */ 
+/* Add sufficient target area to site title */ 
 .wp-block-navigation__responsive-container .wp-block-navigation-link a {
   display: flex;
   min-width: 48px; 
@@ -46,6 +48,7 @@ with others.
 }
 
 /* Mobile */ 
+
 /* Make padding around button consistant whether menu is open or closed */ 
 .wp-block-navigation__responsive-container.is-menu-open {
   padding-top: var(--wp--preset--spacing--40);
@@ -53,13 +56,14 @@ with others.
   padding-bottom: var(--wp--preset--spacing--40);
   padding-left: var(--wp--preset--spacing--30);
 }
+
 /* Add sufficient target area on mobile menu button */ 
-.wp-block-navigation__responsive-container-open, 
-.wp-block-navigation__responsive-container-close {
+.wp-block-navigation__responsive-container-close,
+.wp-block-navigation__responsive-container-open {
   padding: 6px; 
 }
-.wp-block-navigation__responsive-container-close svg, .wp-block-navigation__responsive-container-open svg {
+.wp-block-navigation__responsive-container-close svg, 
+.wp-block-navigation__responsive-container-open svg {
   width: 36px; 
   height: 36px; 
 }
-
