@@ -11,7 +11,7 @@ Copyright: Diana Thompson
 An accessible full site editing base theme. 
 Please note that this is not a complete theme, only a head start.
 You need to add values to or remove setings in theme.json 
-for the theme to work without JavaScript errots in the editor.
+for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
 1.0.0 Initial release
