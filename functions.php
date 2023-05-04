@@ -1,6 +1,6 @@
 <?php
 /**
- * Afset functions and definitions
+ * Attain functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
