@@ -5,7 +5,7 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#212230",
+					"color": "#330d04",
 					"name": "Foreground",
 					"slug": "foreground"
 				},
@@ -15,14 +15,19 @@
 					"slug": "background"
 				},
 				{
-					"color": "#4c6d83",
+					"color": "#660220",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#d4ecff",
+					"color": "#b30438",
 					"name": "Secondary",
 					"slug": "secondary"
+				},
+				{
+					"color": "#f7e6eb",
+					"name": "Tertiary",
+					"slug": "tertiary"
 				}
 			],
 			"gradients": [
@@ -153,6 +158,38 @@
 			"lineHeight": "1.4"
 		},
 		"elements": {
+			"button": {
+				"border": {
+					"radius": "3px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--background)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+				":focus": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--secondary)",
+						"text": "var(--wp--preset--color--background)"
+					}
+				},
+				":visited": {
+					"color": {
+						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			},
 			"h1": {
 				"typography": {
 					"fontSize": "3.625rem",
@@ -201,7 +238,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--preset--color--foreground)"
+						"text": "var(--wp--preset--color--secondary)"
 					},
 					"typography": {
 						"textDecoration": "underline 2px"
@@ -209,11 +246,10 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--preset--color--foreground)"
+						"text": "var(--wp--preset--color--secondary)"
 					},
 					"typography": {
 						"textDecoration": "none"
-
 					}
 				}
 			}
@@ -229,7 +265,7 @@
 						},
 						":focus": {
 							"typography": {
-								"textDecoration": "underline dashed"
+								"textDecoration": "none"
 							}
 						},
 						":active": {

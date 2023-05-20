@@ -1,6 +1,6 @@
 === Attain ===
 Contributors: Diana Thompson
-Tested up to: 6.1
+Tested up to: 6.2.1
 Requires at least: 6.1
 Requires PHP: 7.4
 Version: 1.0.0
@@ -14,7 +14,18 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
-1.0.0 Initial release
+1.1.0 
+Changed default color palette. 
+Formatted links. 
+Added header-container and site-branding classes. 
+Changed title sizing in header and footer. 
+Enlarged target area of navigation block links for accessibility. 
+Enlarged target area of heading links for accessibility.  
+Added way-finding design to the navigation block for accessibility. 
+Added styles to button blocks. 
+
+1.0.0 
+Initial release
 
 == Licence ==
 Attain is distributed under the terms of the GNU GPL.
