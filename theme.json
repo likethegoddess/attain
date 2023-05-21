@@ -241,7 +241,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--preset--color--foreground)"
+						"text": "var(--wp--preset--color--secondary)"
 					},
 					"typography": {
 						"textDecoration": "underline 2px"
@@ -249,7 +249,7 @@
 				},
 				":focus": {
 					"color": {
-						"text": "var(--wp--preset--color--foreground)"
+						"text": "var(--wp--preset--color--secondary)"
 					},
 					"typography": {
 						"textDecoration": "none"
