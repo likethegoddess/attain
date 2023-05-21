@@ -31,6 +31,22 @@ a:focus {
 }
 
 /**
+ ** Buttons
+ */ 
+/* Change outline style button to custom colors */ 
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color), 
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
+  color: var(--wp--preset--color--primary); 
+  border-color: var(--wp--preset--color--primary); 
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover, 
+.wp-block-button.is-style-outline .wp-block-button__link:focus {
+  color: var(--wp--preset--color--secondary); 
+  background-color: var(--wp--preset--color--tertiary);
+  border-color: var(--wp--preset--color--secondary); 
+}
+ 
+/**
  ** Site Header 
  */ 
 /* Add sufficient target area to site title */ 
