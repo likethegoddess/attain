@@ -47,6 +47,20 @@ a:focus {
 }
  
 /**
+ ** Headings  
+ */ 
+/* Enlarge link target area in headings for accessibility and align heading to bottom */ 
+h1, h2, h3, h4, h5, h6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 48px;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  margin-top: auto; 
+}  
+
+/**
  ** Site Header 
  */ 
 /* Add sufficient target area to site title */ 
