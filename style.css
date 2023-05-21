@@ -73,18 +73,84 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Navigation 
  */ 
-/* Add sufficient target area to site title */ 
-.wp-block-navigation__responsive-container .wp-block-navigation-link a {
-  display: flex;
-  min-width: 48px; 
-  min-height: 48px;  
-}
-.wp-block-navigation__responsive-container .wp-block-navigation-link a .wp-block-navigation-item__label {
-  align-self: center;
+/* adjust height to set way finding on child menu and make all menu items consistent height */ 
+.wp-block-navigation .wp-block-navigation-item {
+  height: 48px; 
 }
 
-/* Mobile */ 
+/* Format focus on navigation menu buttons */ 
+.wp-block-navigation__responsive-container-open:focus, .wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open:focus, 
+.wp-block-navigation__responsive-container-close:focus, .wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close:focus, 
+.wp-block-navigation .wp-block-navigation__submenu-icon:focus
+ {
+  outline: 2px solid var(--wp--preset--color--secondary);
+  outline-offset: 1px;
+}
 
+/* Enlarge submenu down arrow icon and add padding to increase target area for accessibility */ 
+.wp-block-navigation .wp-block-navigation__submenu-icon {
+  width: 22px; 
+  height: 22px; 
+}
+.wp-block-navigation .wp-block-navigation__submenu-icon svg {
+  width: 13px; 
+  height: 13px; 
+}
+
+/**
+ ** Navigation Way Finding, for accessibility 
+ */ 
+/* Add left padding to submenu items to accommmodate way finding border */ 
+@media (min-width: 768px) {
+  .wp-block-navigation .has-child .wp-block-navigation__submenu-container .wp-block-navigation-item .wp-block-navigation-item__content {
+    padding-left: 12px; 
+  }
+}
+
+/* Root level menu: add bottom border to current item for way finding */ 
+.wp-block-navigation .wp-block-page-list > .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content { 
+  color: var(--wp--preset--color--secondary);
+  border-bottom: 4px solid var(--wp--preset--color--secondary); 
+} 
+
+/* Child level menu: Add left border to current item for way finding */ 
+.wp-block-navigation .wp-block-page-list > .current-menu-ancestor > .wp-block-navigation__submenu-container > .current-menu-item {
+  color: var(--wp--preset--color--secondary);
+  border-left: 8px solid var(--wp--preset--color--secondary); 
+  padding-left: 12px; 
+}
+.wp-block-navigation .wp-block-page-list > .current-menu-ancestor > .wp-block-navigation__submenu-container > .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  border-bottom-color: transparent; 
+}
+
+/* Grandchild level menu: Add left border to current item for way finding */ 
+.wp-block-navigation .wp-block-page-list .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container .current-menu-item {
+  color: var(--wp--preset--color--secondary);
+  border-left: 8px solid var(--wp--preset--color--secondary); 
+  padding-left: 12px; 
+}
+.wp-block-navigation .wp-block-page-list .wp-block-navigation__submenu-container .wp-block-navigation__submenu-container .current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  border-bottom: 2px solid transparent; 
+}
+
+/* Root ancestor of current items: Add bottom border for way finding on larger screen view only */ 
+@media (min-width: 768px) {
+  .wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-navigation-item.current-menu-ancestor > .wp-block-navigation-item__content {
+    border-bottom: 2px solid var(--wp--preset--color--foreground); 
+  }
+}
+
+/* Child ancestor of current items: Add bottom border for way finding on larger screen view only */ 
+@media (min-width: 768px) {
+  .wp-block-navigation .wp-block-navigation__responsive-container:not(.is-menu-open.has-modal-open) .wp-block-navigation__responsive-close .has-child .wp-block-navigation__submenu-container > .wp-block-navigation-item.current-menu-ancestor {
+    border-left: 4px solid var(--wp--preset--color--foreground); 
+    border-bottom-color: transparent; 
+  }
+}
+
+/**
+ ** Mobile Navigation 
+ */ 
 /* Make padding around button consistant whether menu is open or closed */ 
 .wp-block-navigation__responsive-container.is-menu-open {
   padding-top: var(--wp--preset--spacing--40);
@@ -93,7 +159,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   padding-left: var(--wp--preset--spacing--30);
 }
 
-/* Add sufficient target area on mobile menu button */ 
+/* Enlarge mobile menu icon target area for accessibility */ 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content, 
+.wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-pages-list__item__link {
+  padding: 10px 0; 
+  border-bottom: 4px solid transparent; 
+}
+
+/* Increase target area size to 48px by 48px on mobile menu button for accessibility */ 
 .wp-block-navigation__responsive-container-close,
 .wp-block-navigation__responsive-container-open {
   padding: 6px; 
@@ -102,4 +175,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .wp-block-navigation__responsive-container-open svg {
   width: 36px; 
   height: 36px; 
+}
+
+/* Group submenu items visually with ancester on mobile */ 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+  padding-top: 12px; 
 }
