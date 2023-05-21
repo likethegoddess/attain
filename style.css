@@ -61,16 +61,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }  
 
 /**
- ** Site Header 
+ ** Branding 
  */ 
-/* Add sufficient target area to site title */ 
-.wp-block-site-title {
-  display: flex;
-  min-width: 48px; 
-  min-height: 48px; 
-}
-.wp-block-site-title a {
-  align-self: center;
+/* Enlarge link target area to site title for accessibility and add tranparent bottom border to align with current menu item wayfinding */ 
+.wp-block-site-title a:where(:not(.wp-element-button)) {
+  display: block;
+  padding: 10px 0; 
+  border-bottom: 4px solid transparent; 
 }
 
 /**
