@@ -1,9 +1,9 @@
 === Attain ===
 Contributors: Diana Thompson
-Tested up to: 6.1
+Tested up to: 6.2.2
 Requires at least: 6.1
 Requires PHP: 7.4
-Version: 1.1.0
+Version: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: Diana Thompson
@@ -14,6 +14,12 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
+1.1.1
+Fix nav link target area on nav block
+Fix vertical alignment on root ancestor  
+Remove border bottom on child ancestor 
+Change :focus to :focus-visible 
+
 1.1.0
 Enlarged target area of navigation block links. 
 Added way-finding design to the navigation block. 
