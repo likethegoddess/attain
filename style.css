@@ -25,9 +25,12 @@ with others.
  ** Links
  */ 
 /* Change focus border to custom color and add offset for clarity */ 
-a:focus {
+a:focus-visible {
   outline: 2px solid var(--wp--preset--color--secondary);
   outline-offset: 1px;
+}
+a:active {
+  outline: none!important; 
 }
 
 /**
