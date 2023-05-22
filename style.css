@@ -147,6 +147,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     border-bottom: 2px solid var(--wp--preset--color--foreground); 
     padding-bottom: 12px; 
   }
+  .wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container .wp-block-navigation-item.current-menu-ancestor > .wp-block-navigation-item__content {
+    border-bottom-color: transparent; 
+    padding-bottom: 12px; 
+  }
 }
 
 /* Child ancestor of current items: Add bottom border for way finding on larger screen view only */ 
