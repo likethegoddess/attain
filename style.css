@@ -8,7 +8,7 @@ Text Domain: attain
 Requires at least: 6.1
 Requires PHP: 7.4
 Tested up to: 6.2.2
-Version: 1.1.0
+Version: 1.1.1
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,7 +25,7 @@ with others.
  ** Links
  */ 
 /* Change focus border to custom color and add offset for clarity */ 
-a:focus {
+a:focus-visible {
   outline: 2px solid var(--wp--preset--color--secondary);
   outline-offset: 1px;
 }
@@ -100,6 +100,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Navigation Way Finding, for accessibility 
  */ 
+/* Enlarge menu item target area for accessibility */ 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content, 
+.wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-pages-list__item__link,
+.wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  padding: 10px 0; 
+  border-bottom: 4px solid transparent; 
+}
+
 /* Add left padding to submenu items to accommmodate way finding border */ 
 @media (min-width: 768px) {
   .wp-block-navigation .has-child .wp-block-navigation__submenu-container .wp-block-navigation-item .wp-block-navigation-item__content {
@@ -137,6 +145,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 @media (min-width: 768px) {
   .wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-navigation-item.current-menu-ancestor > .wp-block-navigation-item__content {
     border-bottom: 2px solid var(--wp--preset--color--foreground); 
+    padding-bottom: 12px; 
+  }
+  .wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container .wp-block-navigation-item.current-menu-ancestor > .wp-block-navigation-item__content {
+    border-bottom-color: transparent; 
+    padding-bottom: 12px; 
   }
 }
 
@@ -157,13 +170,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   padding-right: var(--wp--preset--spacing--30);
   padding-bottom: var(--wp--preset--spacing--40);
   padding-left: var(--wp--preset--spacing--30);
-}
-
-/* Enlarge mobile menu icon target area for accessibility */ 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation-item__content, 
-.wp-block-navigation .wp-block-navigation__responsive-container-content .wp-block-pages-list__item__link {
-  padding: 10px 0; 
-  border-bottom: 4px solid transparent; 
 }
 
 /* Increase target area size to 48px by 48px on mobile menu button for accessibility */ 
