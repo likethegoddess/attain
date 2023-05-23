@@ -8,7 +8,7 @@ Text Domain: attain
 Requires at least: 6.1
 Requires PHP: 7.4
 Tested up to: 6.2.2
-Version: 1.1.1
+Version: 1.1.2
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -186,4 +186,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /* Group submenu items visually with ancester on mobile */ 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
   padding-top: 12px; 
+}
+
+/**
+ ** Blog
+ */ 
+body .byline.is-layout-flex {
+  gap: .33rem; 
+}
+.wp-block-post-author__name::before {
+  content: "By "
+}
+.wp-block-post-date::before {
+  content: "on "
+}
+.taxonomy-category::before {
+  content: "Category: "
+}
+.taxonomy-post_tag::before {
+  content: "Tags: "
 }
