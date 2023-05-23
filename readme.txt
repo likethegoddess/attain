@@ -3,7 +3,7 @@ Contributors: Diana Thompson
 Tested up to: 6.2.2
 Requires at least: 6.1
 Requires PHP: 7.4
-Version: 1.1.1
+Version: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: Diana Thompson
@@ -14,6 +14,11 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
+1.1.2
+Adjust formatting of archive and post metadata
+Enlarge title font size
+Apply site focus styles to search field and button
+
 1.1.1
 Adjust nav link target area on nav block
 Adjust vertical alignment on root ancestor  
