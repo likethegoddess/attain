@@ -14,10 +14,6 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
-1.1.2
-Adjust formatting of archive and post metadata
-Enlarge page/post title font size
-
 1.1.1
 Adjust nav link target area on nav block
 Adjust vertical alignment on root ancestor  
