@@ -164,6 +164,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Mobile Navigation 
  */ 
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
 /* Make padding around button consistant whether menu is open or closed */ 
 .wp-block-navigation__responsive-container.is-menu-open {
   padding-top: var(--wp--preset--spacing--40);
