@@ -196,18 +196,23 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Blog
  */ 
+/* Tighten up spacing for a sentence like structure with added content */ 
 body .byline.is-layout-flex {
-  gap: .33rem; 
+  gap: 0.3rem; 
 }
+/* Add "By " before author in post metadata */  
 .wp-block-post-author__name::before {
   content: "By "
 }
+/* Add "on " before date in post metadata */  
 .wp-block-post-date::before {
   content: "on "
 }
+/* Add "Category: " before category in metadata */ 
 .taxonomy-category::before {
   content: "Category: "
 }
+/* Add "Tags: " before tag list in metadata */ 
 .taxonomy-post_tag::before {
   content: "Tags: "
 }
