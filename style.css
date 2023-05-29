@@ -183,6 +183,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   height: 36px; 
 }
 
+/* Make mobile menu font size smaller */ 
+.wp-block-navigation .is-menu-open {
+  font-size: var(--wp--preset--font-size--x-small);
+}
+
 /* Group submenu items visually with ancester on mobile */ 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
   padding-top: 12px; 
@@ -191,29 +196,18 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Blog
  */ 
-/* Add "Category" text before category */ 
+body .byline.is-layout-flex {
+  gap: .33rem; 
+}
+.wp-block-post-author__name::before {
+  content: "By "
+}
+.wp-block-post-date::before {
+  content: "on "
+}
 .taxonomy-category::before {
   content: "Category: "
 }
-/* Add "Tags" text before tags */ 
 .taxonomy-post_tag::before {
   content: "Tags: "
-}
-/* Enlarge target area of category and tag links for accessibility */ 
-.wp-block-post-terms {
-  line-height: 25px;
-  margin-bottom: 23px;  
-}
-.wp-block-post-terms a {
-  padding: 12px 0; 
-}
-
-/**
- ** Search 
- */ 
-/* Apply site focus styles to search field and button */
-.wp-block-search__input:focus,
-.wp-block-search__button:focus {
-  outline: 2px solid var(--wp--preset--color--secondary);
-  outline-offset: 1px;
 }
