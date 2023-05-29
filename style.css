@@ -216,6 +216,7 @@ body .byline.is-layout-flex {
 .wp-block-post-date::before {
   content: "on "
 }
+
 /* Add "Category: " before category in metadata */ 
 .taxonomy-category::before {
   content: "Category: "
@@ -223,4 +224,12 @@ body .byline.is-layout-flex {
 /* Add "Tags: " before tag list in metadata */ 
 .taxonomy-post_tag::before {
   content: "Tags: "
+}
+/* Enlarge target area of category and tag links for accessibility */ 
+.wp-block-post-terms {
+  line-height: 25px;
+  margin-bottom: 23px;  
+}
+.wp-block-post-terms a {
+  padding: 12px 0; 
 }
