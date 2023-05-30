@@ -187,6 +187,16 @@ body {
 .wp-block-navigation__responsive-container-open {
   padding: 6px; 
 }
+
+/* Format focus on mobile menu button */ 
+.wp-block-navigation__responsive-container-open:focus, .wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open.wp-block-navigation__responsive-container-open:focus, 
+.wp-block-navigation__responsive-container-close:focus, .wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close.wp-block-navigation__responsive-container-close:focus, 
+.wp-block-navigation .wp-block-navigation__submenu-icon:focus
+ {
+  outline: 2px solid var(--wp--preset--color--secondary);
+  outline-offset: 1px;
+}
+
 .wp-block-navigation__responsive-container-close svg, 
 .wp-block-navigation__responsive-container-open svg {
   width: 36px; 
