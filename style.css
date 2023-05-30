@@ -235,3 +235,13 @@ body .byline.is-layout-flex {
 .wp-block-post-terms a {
   padding: 12px 0; 
 }
+
+/**
+ ** Search 
+ */ 
+/* Apply site focus styles to search field and button */
+.wp-block-search__input:focus,
+.wp-block-search__button:focus {
+  outline: 2px solid var(--wp--preset--color--secondary);
+  outline-offset: 1px;
+}
