@@ -3,7 +3,7 @@ Contributors: Diana Thompson
 Tested up to: 6.2.2
 Requires at least: 6.1
 Requires PHP: 7.4
-Version: 1.1.2
+Version: 1.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: Diana Thompson
@@ -14,6 +14,14 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
+1.1.3
+Make mobile menu font size smaller
+Tighten space between byline words. 
+Enlarge target area of category and tag links
+Apply focus styles to search field and button
+Format focus on mobile menu button
+Tweak menu alignment 
+
 1.1.2
 Adjust formatting of archive and post metadata
 Enlarge title font size
