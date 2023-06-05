@@ -98,6 +98,11 @@
 			],
 			"fontSizes": [
 				{
+					"fluid": false,
+					"size": "1rem",
+					"slug": "x-small"
+				},
+				{
 					"fluid": {
 						"min": "1rem",
 						"max": "1.125rem"
