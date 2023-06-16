@@ -8,7 +8,7 @@ Text Domain: attain
 Requires at least: 6.1
 Requires PHP: 7.4
 Tested up to: 6.2.2
-Version: 1.1.3
+Version: 1.1.4
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,6 +20,9 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned
 with others.
 */
+
+/* Color palette contrast 
+https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23330d04%0D%0A%23fefefe%0D%0A%23660220%0D%0A%23b30438%0D%0A%23e7e3e2&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18 */ 
 
 /* Prevent horizontal scrolling */
 html, body {
@@ -44,14 +47,14 @@ a:focus-visible {
 /* Change outline style button to custom colors */ 
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color), 
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
-  color: var(--wp--preset--color--primary); 
-  border-color: var(--wp--preset--color--primary); 
+  color: var(--wp--preset--color--foreground); 
+  border-color: var(--wp--preset--color--foreground); 
 }
 .wp-block-button.is-style-outline .wp-block-button__link:hover, 
 .wp-block-button.is-style-outline .wp-block-button__link:focus {
-  color: var(--wp--preset--color--secondary); 
+  color: var(--wp--preset--color--primary); 
   background-color: var(--wp--preset--color--tertiary);
-  border-color: var(--wp--preset--color--secondary); 
+  border-color: var(--wp--preset--color--primary); 
 }
  
 /**

@@ -3,7 +3,7 @@ Contributors: Diana Thompson
 Tested up to: 6.2.2
 Requires at least: 6.1
 Requires PHP: 7.4
-Version: 1.1.3
+Version: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: Diana Thompson
@@ -14,6 +14,13 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
+1.1.4
+Constrating blog content width
+Add schema to theme.json
+Change tertiary color
+Adjust outline button colors
+Adjust heading sizes
+
 1.1.3
 Make mobile menu font size smaller
 Tighten space between byline words. 
