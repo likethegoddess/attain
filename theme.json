@@ -333,9 +333,6 @@
 						}
 					}
 				}
-			},
-			"core/image": {
-				"css": "border: 1px solid var(--wp--preset--color--foreground)"
 			}
 		}
 	},
