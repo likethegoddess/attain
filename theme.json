@@ -161,7 +161,7 @@
 				}
 			]
 		},
-		"custom": {}
+		"useRootPaddingAwareAlignments": true
 	},
 	"styles": {
 		"spacing":{

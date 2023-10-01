@@ -26,3 +26,6 @@ function attain_styles() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'attain_styles' );
+
+// Add wide and full width block support 
+add_theme_support( 'align-wide' );
