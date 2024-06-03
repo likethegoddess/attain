@@ -8,7 +8,9 @@
  * @since 1.0.0
  */
 
-define( 'ATTAIN_VERSION', wp_get_theme()->get( 'Version' ) );
+if ( ! function_exists( 'attain_styles' ) ) :
+
+	define( 'ATTAIN_VERSION', wp_get_theme()->get( 'Version' ) );
 
 /**
  * Enqueue the CSS files.
@@ -25,7 +27,36 @@ function attain_styles() {
 		ATTAIN_VERSION
 	);
 }
+
+endif;
+
 add_action( 'wp_enqueue_scripts', 'attain_styles' );
 
-// Add wide and full width block support 
-add_theme_support( 'align-wide' );
+if ( ! function_exists( 'attain_support' ) ) :
+
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * @since 1.1.5
+	 *
+	 * @return void
+	 */
+
+	function attain_support() {
+
+		// Add wide and full width block support 
+		add_theme_support( 'align-wide' );
+
+		// Replace the default [...] excerpt more with an elipsis.
+		add_filter(
+			'excerpt_more',
+			function( $more ) {
+				return '&hellip;';
+			}
+		);
+
+	}
+
+endif;
+
+add_action( 'after_setup_theme', 'attain_support' );

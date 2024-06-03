@@ -15,7 +15,7 @@ for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
 1.1.4
-Constrating blog content width
+Constraining blog content width
 Add schema to theme.json
 Change tertiary color
 Adjust outline button colors
