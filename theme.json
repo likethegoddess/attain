@@ -333,6 +333,20 @@
 						}
 					}
 				}
+			},
+			"core/image": {
+				"border": {
+					"color": "var(--wp--preset--color--tertiary)",
+					"style": "solid",
+					"width": "1px"
+				}
+			},
+			"core/list": {
+				"spacing": {
+					"margin": {
+						"top": "2px"
+					}
+				}
 			}
 		}
 	},
