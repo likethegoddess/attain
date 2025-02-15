@@ -31,6 +31,14 @@ html, body {
 body {
   position: relative!important;
 }
+
+/**
+ ** Structure
+ */ 
+.wp-site-blocks {
+  padding-top: 0;
+  padding-bottom: 0;
+}
 .has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]), p, h1, h2, h3, h4, h5, h6, ul, ol) {
   padding-right: var(--wp--style--root--padding-right);
   padding-left: var(--wp--style--root--padding-left);
@@ -48,6 +56,10 @@ a:focus-visible {
 /**
  ** Buttons
  */ 
+.wp-block-buttons {
+  margin-bottom: 1.5rem; 
+}
+
 /* Change outline style button to custom colors */ 
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color), 
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
@@ -62,8 +74,13 @@ a:focus-visible {
 }
  
 /**
- ** Headings  
+ ** Typography
  */ 
+
+ 
+
+
+/* Headings */ 
 /* Enlarge link target area in headings for accessibility and align heading to bottom */ 
 h1, h2, h3, h4, h5, h6 {
   display: flex;
