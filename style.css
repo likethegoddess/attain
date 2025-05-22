@@ -44,22 +44,6 @@ body {
   padding-left: var(--wp--style--root--padding-left);
 }
 
-/**
- ** Links
- */ 
-/* Change focus border to custom color and add offset for clarity */ 
-a:focus-visible {
-  outline: 2px solid var(--wp--preset--color--secondary);
-  outline-offset: 1px;
-}
-
-/**
- ** Buttons
- */ 
-.wp-block-buttons {
-  margin-bottom: 1.5rem; 
-}
-
 /* Change outline style button to custom colors */ 
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color), 
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
@@ -215,7 +199,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 /* Remove gap between menu items on mobile */ 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
   gap: 0; 
 }
 
@@ -241,14 +226,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Blog
  */ 
-/* Add spacing before featured image */ 
-.blog .wp-block-post-featured-image,
-.archive .wp-block-post-featured-image,
-.search .wp-block-post-featured-image {
-  margin-top: var(--wp--preset--spacing--50);
-}
 
-/* Tighten up byline spacing for a sentence-like structure with added content */ 
+ /* Tighten up byline spacing for a sentence-like structure with added content */ 
 body .byline.is-layout-flex {
   gap: 0.3rem; 
 }
