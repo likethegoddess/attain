@@ -76,6 +76,14 @@ dt {
   font-weight: bold; 
 }
 
+/** 
+ ** Images
+*/
+.wp-block-image.alignfull :where(figcaption) {
+  margin-left: 1rem; 
+  margin-right: 1rem; 
+}
+
 /**
  ** Branding 
  */ 
