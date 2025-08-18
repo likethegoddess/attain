@@ -368,6 +368,14 @@
 						"top": "2px"
 					}
 				}
+			},
+			"core/quote": {
+        "spacing": {
+          "padding": "1.5rem"
+        },
+				"color": {
+					"background": "var(--wp--preset--color--tertiary)"
+				}
 			}
 		}
 	},
