@@ -376,6 +376,11 @@
 				"color": {
 					"background": "var(--wp--preset--color--tertiary)"
 				}
+			},
+			"core/verse": {
+				"typography": {
+					"fontWeight": "bold"
+				}
 			}
 		}
 	},
