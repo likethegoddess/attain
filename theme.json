@@ -371,8 +371,13 @@
 			},
 			"core/quote": {
         "spacing": {
-          "padding": "1.5rem"
-        },
+					"padding": {
+						"top": "1.5rem",
+						"right": "1.5rem",
+						"bottom": "1.5rem",
+						"left": "1.5rem"
+					} 
+      	},
 				"color": {
 					"background": "var(--wp--preset--color--tertiary)"
 				}
