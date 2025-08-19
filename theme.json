@@ -341,16 +341,30 @@
 					}
 				}
 			},
+			"core/post-terms": {
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--50)"
+					}
+				}
+			},
 			"core/buttons": {
 				"spacing":{
 					"margin": {
 						"bottom": "1.5rem"
-					}
+					}	
 				}
 			},
 			"core/image": {
 				"border": {
 					"color": "var(--wp--preset--color--tertiary)",
+					"style": "solid",
+					"width": "1px"
+				}
+			},
+			"core/post-featured-image": {
+				"border": {
+					"color": "var(--wp--preset--color--black)",
 					"style": "solid",
 					"width": "1px"
 				}
