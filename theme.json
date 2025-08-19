@@ -355,13 +355,6 @@
 					"width": "1px"
 				}
 			},
-			"core/post-featured-image": {
-				"spacing": {
-					"margin": {
-						"top": "var(--wp--preset--spacing--50)"
-					}
-				}
-			},
 			"core/list": {
 				"spacing": {
 					"margin": {
