@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"version": 3,
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -90,6 +90,8 @@
 			"wideSize": "1100px"
 		},
 		"typography": {
+			"defaultFontSizes": false,
+			"fluid": true,
 			"fontFamilies": [
 				{
 					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
@@ -100,6 +102,7 @@
 			"fontSizes": [
 				{
 					"fluid": false,
+					"name": "Extra Small",
 					"size": "1rem",
 					"slug": "x-small"
 				},
@@ -108,6 +111,7 @@
 						"min": "1rem",
 						"max": "1.125rem"
 					},
+					"name": "Small",
 					"size": "1.125rem",
 					"slug": "small"
 				},
@@ -116,22 +120,16 @@
 						"min": "1.25rem",
 						"max": "1.375rem"
 					},
+					"name": "Medium",
 					"size": "1.375rem",
 					"slug": "medium"
-				},
-				{
-					"fluid": {
-						"min": "1.375rem",
-						"max": "1.5rem"
-					},
-					"size": "1.5rem",
-					"slug": "large"
 				},
 				{
 					"fluid": {
 						"min": "1.5rem",
 						"max": "1.75rem"
 					},
+					"name": "Large",					
 					"size": "1.75rem",
 					"slug": "large"
 				},
@@ -140,6 +138,7 @@
 						"min": "1.75rem",
 						"max": "2rem"
 					},
+					"name": "Extra Large",					
 					"size": "2rem",
 					"slug": "x-large"
 				},
@@ -148,6 +147,7 @@
 						"min": "2.5rem",
 						"max": "2.5rem"
 					},
+					"name": "XX Large",					
 					"size": "2.75rem",
 					"slug": "xx-large"
 				},
@@ -156,6 +156,7 @@
 						"min": "3rem",
 						"max": "3.25rem"
 					},
+					"name": "XXX Large",
 					"size": "3.25rem",
 					"slug": "xxx-large"
 				}
