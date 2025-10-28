@@ -6,7 +6,7 @@
 		"color": {
 			"palette": [
 				{
-					"color": "#330d04",
+					"color": "#1a0602",
 					"name": "Foreground",
 					"slug": "foreground"
 				},
@@ -16,19 +16,29 @@
 					"slug": "background"
 				},
 				{
-					"color": "#660220",
+					"color": "#b30438",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#b30438",
+					"color": "#8d032c",
 					"name": "Secondary",
 					"slug": "secondary"
 				},
 				{
-					"color": "#e7e3e2",
+					"color": "#660220",
 					"name": "Tertiary",
 					"slug": "tertiary"
+				},
+				{
+					"color": "#e7e3e2",
+					"name": "Quaternary",
+					"slug": "quaternary"
+				},
+				{
+					"color": "#3C494C",
+					"name": "Quinary",
+					"slug": "quinary"
 				}
 			],
 			"gradients": [
