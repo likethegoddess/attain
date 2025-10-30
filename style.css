@@ -23,7 +23,7 @@ with others.
 */
 
 /* Color palette contrast 
-https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23330d04%0D%0A%23fefefe%0D%0A%23660220%0D%0A%23b30438%0D%0A%23e7e3e2&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18 */ 
+https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%231A0602%20Foreground%0D%0A%23FEFEFE%20Background%0D%0A%23B30438%20Primary%0D%0A%238D032C%20Secondary%0D%0A%23660220%20Tertiary%0D%0A%23E7E3E2%20Quaternary%0D%0A%233C494C%20Quinary%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18 */ 
 
 /* Prevent horizontal scrolling */
 html, body {
@@ -92,8 +92,7 @@ dt {
 @media (min-width: 768px) {
   .wp-block-site-title a:where(:not(.wp-element-button)) {
     display: block;
-    padding: 12px 0; 
-    border-bottom: 4px solid transparent;
+    padding: 15px 0; 
   }
 }
 
@@ -104,8 +103,21 @@ dt {
 .wp-block-navigation ul li:not(.wp-social-link) {
   min-height: 48px; 
 }
+
+/* Desktop root level container: remove gap between menu items */
+.wp-block-navigation__container {
+  gap: 0; 
+}
+
 .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:not(.wp-block-social-link-anchor) {
-  padding: 11px 0 12px; 
+  padding: 15px; 
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  border-top: 1px solid var(--wp--preset--color--quaternary);
+  border-right: 1px solid transparent; 
+  border-bottom: 1px solid var(--wp--preset--color--quaternary);
+  border-left: 1px solid transparent; 
 }
 
 /* Increase target area for accessibility */ 
@@ -122,55 +134,27 @@ dt {
  ** Navigation Way Finding, format current and current ancestor items for accessibility 
  */ 
 
-/* Root level menu item: add transparent bottom border to align current item */ 
-.is-menu-open .wp-block-navigation__container > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.is-menu-open .wp-block-page-list > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  padding: 10px 0; 
-  border-bottom: 4px solid transparent; 
-} 
-
-/* Root level menu item: add bottom border to current item */ 
-.is-menu-open .wp-block-navigation__container > .current-menu-item > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.is-menu-open .wp-block-page-list > .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  color: var(--wp--preset--color--secondary);
-  border-left: 8px solid var(--wp--preset--color--secondary); 
-  padding-left: 12px; 
-} 
-
-/* Root level menu item: add transparent bottom border to align current item, non-mobile only */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-page-list > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  border-bottom: 4px solid transparent; 
-} 
-/* Root level menu item: add bottom border to current item */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .current-menu-item > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-page-list > .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  color: var(--wp--preset--color--secondary);
-  border-bottom: 4px solid var(--wp--preset--color--secondary); 
-} 
-
-/* Add left padding to submenu items to accommmodate way finding border */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .has-child .wp-block-navigation__submenu-container .wp-block-navigation-item .wp-block-navigation-item__content {
-  padding-left: 12px; 
+/* Current menu item: add bottom border to current item */
+.wp-block-navigation__container > .current-menu-item > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
+  color: var(--wp--preset--color--background);
+  background-color: var(--wp--preset--color--primary); 
 }
 
-/* Child level menu item: Add left solid border to current item */ 
+/* Desktop child/grandchild level container: format borders and background */ 
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  background-color: var(--wp--preset--color--quaternary);
+}
+
+/* Desktop child/grandchild level current menu item: reverse out colors */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container > .current-menu-item > a {
-  color: var(--wp--preset--color--secondary);
-  border-left: 8px solid var(--wp--preset--color--secondary); 
-  padding-left: 12px; 
+  color: var(--wp--preset--color--background);
+  background-color: var(--wp--preset--color--primary); 
 }
 
-/* Root level ancestor: Add bottom border when ancestor of current page */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > :not(.current-menu-item) > .wp-block-navigation-item__content.current-menu-ancestor, 
-.wp-block-navigation__responsive-container.current-menu-ancestor:not(.is-menu-open) .wp-block-page-list > :not(.current-menu-item) > .wp-block-navigation-item__content.current-menu-ancestor.current-menu-ancestor {
-  border-bottom: 2px solid var(--wp--preset--color--foreground); 
-  padding-bottom: 14px; 
-}
-
-/* Child level ancestor: Add left border when ancestor of current page */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-submenu .has-child .current-menu-ancestor {
-  border-left: 6px solid var(--wp--preset--color--foreground); 
+/* Desktop current menu ancestor: add left solid border */
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-ancestor > a {
+  color: var(--wp--preset--color--primary);
+  border-left: 8px solid var(--wp--preset--color--primary); 
   padding-left: 12px; 
 }
 
