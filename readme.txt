@@ -3,7 +3,7 @@ Contributors: Diana Thompson
 Tested up to: 6.2.2
 Requires at least: 6.1
 Requires PHP: 7.4
-Version: 1.1.4
+Version: 1.1.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: Diana Thompson
@@ -14,6 +14,10 @@ You need to add values to or remove setings in theme.json
 for the theme to work without JavaScript errors in the editor.
 
 == Changelog ==
+1.1.6
+Expand color palette
+Add current ancestor class 
+
 1.1.5
 Add home page template
 Change all page titles to h1
