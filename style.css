@@ -1,14 +1,15 @@
 /*
 Theme Name: Attain
-Theme URI: https://attainwp.com
+Theme URI: https://resourceful-digital.com/
 Author: Diana Thompson
-Author URI: https://itsresourceful.com
+Author URI: https://dianathompson.org
 Tags: accessibility-ready, full-site-editing
 Text Domain: attain
+Description: Attain is a full site editing theme designed to be accessibility-ready and lightweight. 
 Requires at least: 6.1
 Requires PHP: 7.4
 Tested up to: 6.2.2
-Version: 1.1.4
+Version: 1.1.5
 
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +23,7 @@ with others.
 */
 
 /* Color palette contrast 
-https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23330d04%0D%0A%23fefefe%0D%0A%23660220%0D%0A%23b30438%0D%0A%23e7e3e2&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18 */ 
+https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%231A0602%20Foreground%0D%0A%23FEFEFE%20Background%0D%0A%23B30438%20Primary%0D%0A%238D032C%20Secondary%0D%0A%23660220%20Tertiary%0D%0A%23E7E3E2%20Quaternary%0D%0A%233C494C%20Quinary%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18 */ 
 
 /* Prevent horizontal scrolling */
 html, body {
@@ -33,17 +34,17 @@ body {
 }
 
 /**
- ** Links
+ ** Structure
  */ 
-/* Change focus border to custom color and add offset for clarity */ 
-a:focus-visible {
-  outline: 2px solid var(--wp--preset--color--secondary);
-  outline-offset: 1px;
+.wp-site-blocks {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where([class*="wp-block-"]:not(.alignfull):not([class*="__"]), p, h1, h2, h3, h4, h5, h6, ul, ol) {
+  padding-right: var(--wp--style--root--padding-right);
+  padding-left: var(--wp--style--root--padding-left);
 }
 
-/**
- ** Buttons
- */ 
 /* Change outline style button to custom colors */ 
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color), 
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color) {
@@ -58,8 +59,10 @@ a:focus-visible {
 }
  
 /**
- ** Headings  
+ ** Typography
  */ 
+
+/* Headings */ 
 /* Enlarge link target area in headings for accessibility and align heading to bottom */ 
 h1, h2, h3, h4, h5, h6 {
   display: flex;
@@ -70,6 +73,17 @@ h1, h2, h3, h4, h5, h6 {
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   margin-top: auto; 
 }  
+dt {
+  font-weight: bold; 
+}
+
+/** 
+ ** Images
+*/
+.wp-block-image.alignfull :where(figcaption) {
+  margin-left: 1rem; 
+  margin-right: 1rem; 
+}
 
 /**
  ** Branding 
@@ -78,8 +92,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 @media (min-width: 768px) {
   .wp-block-site-title a:where(:not(.wp-element-button)) {
     display: block;
-    padding: 12px 0; 
-    border-bottom: 4px solid transparent;
+    padding: 15px 0; 
   }
 }
 
@@ -90,8 +103,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .wp-block-navigation ul li:not(.wp-social-link) {
   min-height: 48px; 
 }
+
+/* Desktop root level container: remove gap between menu items */
+.wp-block-navigation__container {
+  gap: 0; 
+}
+
 .wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:not(.wp-block-social-link-anchor) {
-  padding: 11px 0 12px; 
+  padding: 15px; 
+}
+
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  border-top: 1px solid var(--wp--preset--color--quaternary);
+  border-right: 1px solid transparent; 
+  border-bottom: 1px solid var(--wp--preset--color--quaternary);
+  border-left: 1px solid transparent; 
 }
 
 /* Increase target area for accessibility */ 
@@ -108,55 +134,27 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
  ** Navigation Way Finding, format current and current ancestor items for accessibility 
  */ 
 
-/* Root level menu item: add transparent bottom border to align current item */ 
-.is-menu-open .wp-block-navigation__container > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.is-menu-open .wp-block-page-list > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  padding: 10px 0; 
-  border-bottom: 4px solid transparent; 
-} 
-
-/* Root level menu item: add bottom border to current item */ 
-.is-menu-open .wp-block-navigation__container > .current-menu-item > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.is-menu-open .wp-block-page-list > .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  color: var(--wp--preset--color--secondary);
-  border-left: 8px solid var(--wp--preset--color--secondary); 
-  padding-left: 12px; 
-} 
-
-/* Root level menu item: add transparent bottom border to align current item, non-mobile only */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-page-list > :not(.current-menu-item) > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  border-bottom: 4px solid transparent; 
-} 
-/* Root level menu item: add bottom border to current item */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .current-menu-item > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor), 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-page-list > .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
-  color: var(--wp--preset--color--secondary);
-  border-bottom: 4px solid var(--wp--preset--color--secondary); 
-} 
-
-/* Add left padding to submenu items to accommmodate way finding border */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .has-child .wp-block-navigation__submenu-container .wp-block-navigation-item .wp-block-navigation-item__content {
-  padding-left: 12px; 
+/* Current menu item: add bottom border to current item */
+.wp-block-navigation__container > .current-menu-item > .wp-block-navigation-item__content:not(.wp-block-social-link-anchor) { 
+  color: var(--wp--preset--color--background);
+  background-color: var(--wp--preset--color--primary); 
 }
 
-/* Child level menu item: Add left solid border to current item */ 
+/* Desktop child/grandchild level container: format borders and background */ 
+.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container {
+  background-color: var(--wp--preset--color--quaternary);
+}
+
+/* Desktop child/grandchild level current menu item: reverse out colors */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container > .current-menu-item > a {
-  color: var(--wp--preset--color--secondary);
-  border-left: 8px solid var(--wp--preset--color--secondary); 
-  padding-left: 12px; 
+  color: var(--wp--preset--color--background);
+  background-color: var(--wp--preset--color--primary); 
 }
 
-/* Root level ancestor: Add bottom border when ancestor of current page */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > :not(.current-menu-item) > .wp-block-navigation-item__content.current-menu-ancestor, 
-.wp-block-navigation__responsive-container.current-menu-ancestor:not(.is-menu-open) .wp-block-page-list > :not(.current-menu-item) > .wp-block-navigation-item__content.current-menu-ancestor.current-menu-ancestor {
-  border-bottom: 2px solid var(--wp--preset--color--foreground); 
-  padding-bottom: 14px; 
-}
-
-/* Child level ancestor: Add left border when ancestor of current page */ 
-.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-submenu .has-child .current-menu-ancestor {
-  border-left: 6px solid var(--wp--preset--color--foreground); 
+/* Desktop current menu ancestor: add left solid border */
+.wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .current-menu-ancestor > a {
+  color: var(--wp--preset--color--primary);
+  border-left: 8px solid var(--wp--preset--color--primary); 
   padding-left: 12px; 
 }
 
@@ -197,7 +195,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 /* Remove gap between menu items on mobile */ 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__container, 
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
   gap: 0; 
 }
 
@@ -223,7 +222,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 /**
  ** Blog
  */ 
-/* Tighten up spacing for a sentence like structure with added content */ 
+
+ /* Tighten up byline spacing for a sentence-like structure with added content */ 
 body .byline.is-layout-flex {
   gap: 0.3rem; 
 }
@@ -261,4 +261,11 @@ body .byline.is-layout-flex {
 .wp-block-search__button:focus {
   outline: 2px solid var(--wp--preset--color--secondary);
   outline-offset: 1px;
+}
+
+/**
+ ** Local formatting 
+ */ 
+.border {
+  border: 1px solid var(--wp--preset--color--foreground); 
 }
