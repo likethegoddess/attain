@@ -16,7 +16,9 @@ for the theme to work without JavaScript errors in the editor.
 == Changelog ==
 1.1.6
 Expand color palette
-Add current ancestor class 
+Add current ancestor class formatting
+Simplify navigation wayfinding
+Add composer and edit .gitignore for Squizlabs PHP CodeSniffer
 
 1.1.5
 Add home page template
